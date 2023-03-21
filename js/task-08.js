@@ -33,6 +33,7 @@ formRef.addEventListener("submit", (event) => {
     } = event.currentTarget;
 if(email.value === "" || password.value === ""){
     alert("Всі поля мають бути заповнені");
+    return;
 }
 const items = {
     email: email.value,
@@ -42,3 +43,4 @@ const items = {
     console.log(items);
     formRef.reset();
 });
+

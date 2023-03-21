@@ -19,4 +19,11 @@ const elementOfGalery = images.map(element => `<li> <img src="${element.url}" al
 
 galeryRef.insertAdjacentHTML("beforeend", elementOfGalery);
 
+galeryRef.style.display = "flex";
+
 console.log(elementOfGalery);
+
+
+console.dir(galeryRef);
+
+

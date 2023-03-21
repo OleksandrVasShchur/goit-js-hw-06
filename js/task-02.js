@@ -9,16 +9,19 @@ const ingredients = [
 
 const totalListRef = document.querySelector("#ingredients");
 
-ingredients.forEach((element) => {
-  
+const ingredientsName = ingredients.map((element) => {
 const createTotalList = document.createElement("li");
-createTotalList.classList.add('element');
 
 createTotalList.textContent = element;
+createTotalList.classList.add('element');
 
-totalListRef.appendChild(createTotalList);
-
+return createTotalList;
 });
+totalListRef.append(...ingredientsName);
+
+
+
+
 
 // const li1 = document.createElement("li");
 // const liText1 = document.createTextNode("Potatoes");
